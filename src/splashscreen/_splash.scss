@@ -1,12 +1,25 @@
-.splash-screen {
+#splash-screen {
   z-index: 1000;
   background-color: #181818;
   width: 100vw;
   height: 100vh;
   position: absolute;
+  opacity: 100%;
   top: 0;
   left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 7rem;
+    flex: 1;
+  }
+  p {
+    margin-bottom: 10px;
+  }
   &.hidden {
-    display: none;
+    opacity: 0;
+    transition: opacity 1s;
   }
 }

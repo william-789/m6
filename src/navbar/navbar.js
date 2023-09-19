@@ -13,10 +13,11 @@ function Navbar() {
   navOptions.forEach((option) => {
     const aTag = document.createElement("a");
     aTag.className = "nav-option";
-    aTag.setAttribute("onclick", `changePage('${option.page.toLowerCase()}')`);
+    aTag.setAttribute("onclick", `changePage(this,'${option.page.toLowerCase()}')`);
 
     const icon = document.createElement("img");
     icon.className = "nav-icon";
+    icon.id = option.page
     icon.alt = option.alt;
     icon.src = `assets/icons/${option.iconName}`;
 
