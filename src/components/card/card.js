@@ -1,6 +1,7 @@
 function createCard(bg, line1, line2, line3, price, liked) {
   const cardContainer = document.createElement("div"); // card
   cardContainer.className = "card";
+  cardContainer.style.backgroundImage = `url("${bg}")`
   const infoDiv = document.createElement("div"); // info
   infoDiv.className = "info";
   const textDiv = document.createElement("div"); // text

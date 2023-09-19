@@ -6,14 +6,9 @@ import createListItemRound from "../../src/components/list_item_round/list_item_
 import createXSPill from "../../src/components/slim_pill/slim_pill.js";
 import createMoreContainer from "../../src/components/more/more.js";
 
-// console.log(user_data.payments)
-// const favorites = user_data.favorites
-// const pending = user_data.payments.filter((payment) => payment.state.toLowerCase() === "pendente");
-// const paid = user_data.payments.filter((payment) => payment.state.toLowerCase() === "completo");
-
 const pendingMSG = "Existem pagamentos pendentes na tua conta"
 const cardImgSrc = "assets/icons/card.svg"
-export default function userProfile() {
+function userProfile() {
   // user data
   const favorites = user_data.favorites
   const pending = user_data.payments.filter((payment) => payment.state.toLowerCase() === "pendente");
@@ -78,5 +73,4 @@ export default function userProfile() {
   page.appendChild(containerPayments);
   return page;
 }
-
-// module.exports = userProfile
+export default userProfile;

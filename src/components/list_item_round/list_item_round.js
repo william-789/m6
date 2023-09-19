@@ -1,4 +1,4 @@
-import createListItem from "../list_item/list_item";
+import createListItem from "../list_item/list_item.js";
 
 function createListItemRound(imageSrc, imageAlt, name, dateTime, liked) {
   const el = createListItem(imageSrc, imageAlt, name, dateTime, '', liked);

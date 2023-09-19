@@ -1,8 +1,8 @@
-import generateHome from "home.js";
-import searchPage from "search.js";
-import tickets from "tickets.js";
+import generateHome from "./home.js";
+import searchPage from "./search.js";
+import tickets from "./tickets.js";
 import userProfile from "./user.js";
-export default class SinglePageManager {
+class SinglePageManager {
   constructor() {
   }
   home() {
@@ -21,5 +21,4 @@ export default class SinglePageManager {
     return userProfile();
   }
 }
-
-// module.exports = SinglePageManager
+export default SinglePageManager;

@@ -1,6 +1,7 @@
 function createBoughtCard(bg, dateTime, name, location) {
   const card = document.createElement("div");
   card.className = "card bought";
+  card.style.backgroundImage = `url("${bg}")`
 
   const currentInfo = document.createElement("p");
   currentInfo.className = "side-info current";

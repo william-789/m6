@@ -281,6 +281,19 @@ nav .nav-option p {
   border-left: #FF9900 dashed;
 }
 
+/* card search display */
+.card.search-display {
+  padding-top: 60%;
+}
+.card.search-display::before {
+  background: none;
+}
+.card.search-display .like {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+}
+
 /* bar */
 .bar {
   width: 100%;

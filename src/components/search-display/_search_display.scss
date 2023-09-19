@@ -1,0 +1,11 @@
+.card.search-display {
+  padding-top: 60%;
+  &::before {
+    background: none;
+  }
+  .like {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}

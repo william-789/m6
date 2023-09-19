@@ -43,6 +43,9 @@ function createMovementPill (imageSrc, imageAlt, name = '', dateTime, location, 
   pillMovement.classList.add('movement')
   return pillMovement
 }
+
+export default createPill;
+
 export {
   createPill,
   createMovementPill

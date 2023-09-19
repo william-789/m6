@@ -67,4 +67,5 @@ const [user_data] =
     }
   ]
 }]
-module.exports = user_data;
+
+export default user_data;
