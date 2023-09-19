@@ -7,7 +7,7 @@ const navbar = Navbar();
 function singlePageManager() { // EDIT BACK TO HOMEPAGE
   const main = document.getElementById("main");
   // create home
-  const home = manager["user"]();
+  const home = manager["home"]();
   // load home
   main.appendChild(home)
   // add navbar once

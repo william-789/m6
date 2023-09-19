@@ -1,7 +1,7 @@
 import createListItem from "../list_item/list_item.js";
 
-function createListItemRound(imageSrc, imageAlt, name, dateTime, liked) {
-  const el = createListItem(imageSrc, imageAlt, name, dateTime, '', liked);
+function createListItemRound(imageSrc, imageAlt, name, dateTime, location = '', liked) {
+  const el = createListItem(imageSrc, imageAlt, name, dateTime, location, liked);
   el.classList.add("round");
   return el;
 }

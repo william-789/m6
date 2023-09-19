@@ -65,6 +65,33 @@ const [user_data] =
       entidade: 21230,
       referencia: "999 999 999"
     }
+  ],
+  currentEvent: [{
+    image: 'assets/images/brunch.jpg',
+    name: 'brunch electronik',
+    date: 'domingo 17 set.',
+    location: 'Tapada da Ajuda',
+  }],
+  cashless: {
+    saldo: 0
+  },
+  suggestion: [
+    {
+      image: 'assets/images/brunch.jpg',
+      name: 'brunch electronik',
+      date: 'domingo 17 set.',
+      location: 'Tapada da Ajuda',
+      price: 35,
+      liked: false
+    },
+    {
+      image: 'assets/images/somnii_23.jpg',
+      name: 'somnii 2023',
+      date: '14 de dezembro 2023',
+      location: 'A definir',
+      price: 25,
+      liked: false
+    }
   ]
 }]
 

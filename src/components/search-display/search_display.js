@@ -4,6 +4,7 @@ function createDisplayCard(bg, alt, liked) {
   card.style.backgroundImage = `url("${bg}")`
 
   const icon = document.createElement('img');
+  icon.className = 'side-info like'
   if(liked) {
     icon.alt = 'liked'
     icon.src = "assets/icons/heart_full.svg";

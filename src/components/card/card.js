@@ -16,7 +16,7 @@ function createCard(bg, line1, line2, line3, price, liked) {
   locationP.textContent = line3;
 
   const priceP = document.createElement("p"); // side-info
-  priceP.textContent = price;
+  priceP.textContent = price.toFixed(2) + ' €';
   priceP.className = "side-info";
 
   const likeIcon = document.createElement("img"); // side-info like

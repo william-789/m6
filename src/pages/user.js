@@ -32,7 +32,7 @@ function userProfile() {
       const listItem = createListItem(data.image,data.name,data.name,data.date,data.location,true)
       containerFavorites.appendChild(listItem)
     } else {
-      const listItemRound = createListItemRound(data.image,data.name,data.name,data.date,true)
+      const listItemRound = createListItemRound(data.image,data.name,data.name,'Artista','', true)
       containerFavorites.appendChild(listItemRound)
     }
   }
@@ -46,7 +46,7 @@ function userProfile() {
   headingPending.textContent = "Pagamentos pendentes";
   containerPending.appendChild(headingPending); // add title
   for(const payment of pending) {
-    const item = createMovementPill(cardImgSrc, "card","Pagamento","Pendente",payment.date,payment.value)
+    const item = createMovementPill(cardImgSrc, "card","Pagamento","Pendente",payment.date,payment.value,false)
     containerPending.appendChild(item)
     const itemDetails = createXSPill(["Entidade","Referência","Valor"],[payment.entidade,payment.referencia,payment.value],true)
     containerPending.appendChild(itemDetails)
@@ -61,7 +61,7 @@ function userProfile() {
   headingPayments.textContent = "Outros pagamentos";
   containerPayments.appendChild(headingPayments); // add title
   for(const payment of paid) {
-    const item = createMovementPill(cardImgSrc, "card",payment.type,"Completo",payment.date,payment.value)
+    const item = createMovementPill(cardImgSrc, "card",payment.type,"Completo",payment.date,payment.value,false)
     item.classList.add('green')
     containerPayments.appendChild(item)
   }

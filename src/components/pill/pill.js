@@ -1,4 +1,4 @@
-function createPill(imageSrc, imageAlt, name = '', dateTime, location, eventPrice) {
+function createPill(imageSrc, imageAlt, name = '', dateTime, location = '', eventPrice, uppercase = true) {
   const pillDiv = document.createElement("div");
   pillDiv.className = "pill";
 
@@ -15,15 +15,19 @@ function createPill(imageSrc, imageAlt, name = '', dateTime, location, eventPric
   textDiv.className = "text";
 
   const eventNameHeading = document.createElement("h1"); // h1
-  if(name) eventNameHeading.textContent = name.toUpperCase();
+  if(name) {
+    if(uppercase) eventNameHeading.textContent = name.toUpperCase();
+    else eventNameHeading.textContent = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+
+  }
   const eventDateTimeSpan = document.createElement("span"); // span
   eventDateTimeSpan.textContent = dateTime;
   const eventLocationP = document.createElement("p"); // p
-  eventLocationP.textContent = location;
+  if(location) eventLocationP.textContent = location;
 
   if(name) textDiv.appendChild(eventNameHeading); // text
   textDiv.appendChild(eventDateTimeSpan);
-  textDiv.appendChild(eventLocationP);
+  if(location) textDiv.appendChild(eventLocationP);
 
   const eventPriceP = document.createElement("p"); // price
   eventPriceP.className = "side-info";
@@ -38,8 +42,8 @@ function createPill(imageSrc, imageAlt, name = '', dateTime, location, eventPric
   return pillDiv;
 }
 
-function createMovementPill (imageSrc, imageAlt, name = '', dateTime, location, eventPrice) {
-  const pillMovement = createPill(imageSrc, imageAlt, name, dateTime, location, eventPrice);
+function createMovementPill (imageSrc, imageAlt, name = '', dateTime, location = '', eventPrice, uppercase = true) {
+  const pillMovement = createPill(imageSrc, imageAlt, name, dateTime, location, eventPrice, uppercase);
   pillMovement.classList.add('movement')
   return pillMovement
 }

@@ -1,7 +1,7 @@
 import { createPill } from "../pill/pill";
 
-function createShortPill(imageSrc, imageAlt, dateTime, value, price) {
-  const s_pill = createPill(imageSrc, imageAlt, '', dateTime, value, price);
+function createShortPill(imageSrc, imageAlt, dateTime, value, price, uppercase = true) {
+  const s_pill = createPill(imageSrc, imageAlt, '', dateTime, value, price, uppercase);
   s_pill.classList.add('s-pill');
   return s_pill;
 }

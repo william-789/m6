@@ -58,6 +58,8 @@ background: linear-gradient(180deg, #323232 0%, #181818 76.56%, #181818 100%);
 
 /* bar */
 @import "../src/components/bar/bar";
+/* info bar */
+@import "../src/components/main_bar/main_bar";
 
 /* search */
 @import "../src/components/search_bar/search_bar";

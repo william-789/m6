@@ -11,11 +11,18 @@ function createXSPill(leftTextList, rightTextList, paymentBoolean) {
   })
 
   const divRight = document.createElement("div"); // right div
-  rightTextList.forEach((text) => {
+  // quick fix for price, shouldn't be here
+  for(let i=0; i < rightTextList.length; i++) {
     const dataP = document.createElement("p");
-    dataP.textContent = text;
+    if(i === rightTextList.length-1) dataP.textContent = rightTextList[i].toFixed(2) + ' €';
+      else dataP.textContent = rightTextList[i];
     divRight.appendChild(dataP);
-  })
+  }
+  // rightTextList.forEach((text) => {
+  //   const dataP = document.createElement("p");
+  //   dataP.textContent = text;
+  //   divRight.appendChild(dataP);
+  // })
 
   xsPillDiv.appendChild(divLeft); // xsPill
   xsPillDiv.appendChild(divRight);

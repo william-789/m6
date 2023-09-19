@@ -31,5 +31,11 @@
         color: $font-green;
       }
     }
+    &.available {
+      cursor: pointer;
+    }
+    &.unavailable * {
+      color: $font-unavailable;
+    }
   }
 }
