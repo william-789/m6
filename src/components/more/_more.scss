@@ -1,0 +1,12 @@
+.container.more { // !!!!!
+  display: flex;
+  justify-content: center;
+  .symbol {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    padding: 5px;
+    background-color: $bg-gray;
+    cursor: pointer;
+  }
+}

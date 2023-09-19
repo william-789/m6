@@ -1,0 +1,346 @@
+/*
+navbar bg #181818
+orange: #FF9900 (span)
+white: #FFF (h1)
+unselected/unavailable: #A0A0A0
+light gray letter: #E6E6E6 (general font)
+green: #00E109
+
+Festival card
+border-radius: 0px 0px 20px 20px;
+background: linear-gradient(180deg, rgba(50, 50, 50, 0.00) 0%, #323232 75.11%, #323232 100%);
+
+List item
+border-radius: 15px;
+background: #323232;
+
+Pill
+border-radius: 45px;
+background: #323232;
+border-radius: 0px 0px 45px 45px;
+background: linear-gradient(180deg, #323232 0%, #181818 76.56%, #181818 100%);
+*/
+/* variables */
+/* general */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+html, body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  color: #E6E6E6;
+  background-color: #181818;
+}
+
+.page {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 10px;
+  overflow: auto;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.15rem;
+}
+
+.title-non-bold {
+  font-size: 1.15rem;
+  font-weight: 400;
+}
+
+h3, p {
+  font-size: 0.75rem;
+}
+
+span {
+  font-size: 0.85rem;
+  color: #FF9900;
+}
+
+.side-info {
+  background-color: #181818;
+  font-size: 0.75rem;
+  padding: 0.35rem;
+  border-radius: 0.25rem;
+}
+
+.side-info.like {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.container > h1 {
+  margin-bottom: 10px;
+}
+
+/* navbar */
+nav {
+  display: flex;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  background-color: #181818;
+  width: 100%;
+  z-index: 100;
+}
+nav .nav-option {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+nav .nav-option .nav-icon {
+  width: 25px;
+  height: 25px;
+}
+nav .nav-option .nav-icon.active {
+  /**/
+}
+nav .nav-option p {
+  display: none;
+}
+
+/* splash screen */
+.splash-screen {
+  z-index: 1000;
+  background-color: #181818;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.splash-screen.hidden {
+  display: none;
+}
+
+/* pill */
+.pill {
+  width: 100%;
+  height: 5rem;
+  background-image: linear-gradient(270deg, #323232 0%, #181818 76.56%, #181818 100%);
+  display: flex;
+  margin-bottom: 10px;
+  border-radius: 2.5rem;
+}
+.pill .img-div, .pill img {
+  width: 5rem;
+  height: 100%;
+  border-radius: 2.5rem;
+}
+.pill .info {
+  flex: 1;
+  padding: 0.5rem 1.6rem 0.5rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pill.movement .img-div {
+  background-color: #323232;
+  display: flex;
+  align-items: center;
+}
+.pill.movement .img-div img {
+  height: 50%;
+}
+.pill.movement.green span {
+  color: #00E109;
+}
+
+/* slim pill */
+.pill.s-pill {
+  height: 4rem;
+  border-radius: 2rem;
+}
+.pill.s-pill .img-div img {
+  width: 4rem;
+  border-radius: 2rem;
+}
+.pill.s-pill .info .text span {
+  font-size: 1.15rem;
+  color: #00E109;
+}
+
+/* list - item */
+.pill.list-item {
+  border-radius: 1rem;
+}
+.pill.list-item img {
+  width: 5rem;
+  border-radius: 1rem 0 0 1rem;
+}
+.pill.list-item .info {
+  padding: 1rem;
+}
+.pill.list-item .info .side-info.like {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+}
+
+/* list-item-round */
+.pill.list-item.round {
+  border-radius: 2.5rem;
+}
+.pill.list-item.round img {
+  border-radius: 2.5rem;
+}
+
+/* short pill */
+.xs-pill {
+  width: 80%;
+  margin-left: 20%;
+  background-color: #323232;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+.xs-pill p {
+  text-align: right;
+}
+.xs-pill.payment {
+  padding: 20px;
+}
+
+/* card */
+.card {
+  position: relative;
+  width: 100%;
+  padding-top: 80%;
+  background-image: url("../../../assets/images/sonar_24.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 10px;
+  border-radius: 1.5rem;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 1.5rem;
+  background: linear-gradient(180deg, rgba(50, 50, 50, 0) 0%, #323232 75.11%, #323232 100%);
+}
+.card .info {
+  position: absolute;
+  display: flex;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 5%;
+}
+.card .info .text {
+  padding-left: 5%;
+}
+.card .info .text .side-info {
+  margin-top: 5%;
+  display: inline-block;
+}
+
+/* card bought */
+.card.bought {
+  padding-top: 50%;
+}
+.card.bought .side-info.current {
+  background-color: #FF9900;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+}
+.card.bought::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 17%;
+  border-left: #FF9900 dashed;
+}
+
+/* bar */
+.bar {
+  width: 100%;
+  background-color: #323232;
+  padding: 2px 4px;
+  border-radius: 1rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.bar .symbol {
+  height: 100%;
+  border-radius: 1rem;
+}
+.bar.notice span {
+  margin-left: 5px;
+}
+
+/* search */
+.bar.search-bar {
+  width: 100%;
+  background-color: #323232;
+  padding: 2px 4px;
+  border-radius: 1rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.bar.search-bar #input {
+  height: 100%;
+  flex: 1;
+  border-radius: 1rem;
+  border: none;
+  background-color: inherit;
+}
+.bar.search-bar #search-button {
+  height: 100%;
+  border-radius: 1rem;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+/* see more */
+.container.more {
+  display: flex;
+  justify-content: center;
+}
+.container.more .symbol {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  padding: 5px;
+  background-color: #323232;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=styles.css.map */

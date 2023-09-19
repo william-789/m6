@@ -1,0 +1,18 @@
+.card.bought {
+  padding-top: 50%;
+  .side-info.current {
+    background-color: $orange-font;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+  }
+  &::after {
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 17%;
+    border-left: $orange-font dashed;
+  }
+}

@@ -1,0 +1,29 @@
+nav {
+  display: flex;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  background-color: $bg-main-dark;
+  width: 100%;
+  z-index: 100;
+  .nav-option {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    text-decoration: none;
+    cursor: pointer;
+
+    .nav-icon {
+      width: 25px;
+      height: 25px;
+      // filter: #A0A0A0;
+      &.active {
+        /**/
+      }
+    }
+    p {
+      display: none;
+    }
+  }
+}

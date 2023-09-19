@@ -1,0 +1,63 @@
+/*
+navbar bg #181818
+orange: #FF9900 (span)
+white: #FFF (h1)
+unselected/unavailable: #A0A0A0
+light gray letter: #E6E6E6 (general font)
+green: #00E109
+
+Festival card
+border-radius: 0px 0px 20px 20px;
+background: linear-gradient(180deg, rgba(50, 50, 50, 0.00) 0%, #323232 75.11%, #323232 100%);
+
+List item
+border-radius: 15px;
+background: #323232;
+
+Pill
+border-radius: 45px;
+background: #323232;
+border-radius: 0px 0px 45px 45px;
+background: linear-gradient(180deg, #323232 0%, #181818 76.56%, #181818 100%);
+*/
+/* variables */
+@import "variables";
+
+/* general */
+@import "general";
+
+/* navbar */
+@import "../src/navbar/navbar";
+
+/* splash screen */
+@import "../src/splashscreen/splash";
+
+/* pill */
+@import "../src/components/pill/pill";
+
+/* slim pill */
+@import "../src/components/slim_pill/slim_pill";
+
+/* list - item */
+@import "../src/components/list_item/list_item";
+
+/* list-item-round */
+@import "../src/components/list_item_round/list_item_round";
+
+/* short pill */
+@import "../src/components/short_pill/short_pill";
+
+/* card */
+@import "../src/components/card/card";
+
+/* card bought */
+@import "../src/components/card_bought/card_bought";
+
+/* bar */
+@import "../src/components/bar/bar";
+
+/* search */
+@import "../src/components/search_bar/search_bar";
+
+/* see more */
+@import "../src/components/more/more";

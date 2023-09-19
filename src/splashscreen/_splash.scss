@@ -1,0 +1,12 @@
+.splash-screen {
+  z-index: 1000;
+  background-color: #181818;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  &.hidden {
+    display: none;
+  }
+}
